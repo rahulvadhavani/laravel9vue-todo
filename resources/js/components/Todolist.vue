@@ -21,20 +21,20 @@
               <table class="table mb-4">
                 <thead>
                   <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">Todo item</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Actions</th>
+                    <th style="text-align: start;" width="10%">No.</th>
+                    <th style="text-align: start;" width="40%">Todo item</th>
+                    <th style="text-align: center;" width="10%">Status</th>
+                    <th style="text-align: center;" width="20%">Time</th>
+                    <th style="text-align: center;" width="20%">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="(todo, index) in todos" :key="todo.id">
-                    <th scope="row">{{index+1}}</th>
-                    <td>{{todo.title}}</td>
-                    <td><button v-on:click="updateStatus(todo.id)" class="btn btn-sm btn-warning" :class="{'btn-dark text-danger' : todo.status}">{{todo.status ? 'Complate' : 'Pending'}}</button></td>
-                    <td>{{todo.created_at}}</td>
-                    <td>
+                    <td style="text-align: start;" width="10%">{{index+1}}</td>
+                    <td style="text-align: start;" width="40%">{{todo.title}}</td>
+                    <td style="text-align: center;" width="10%"><button v-on:click="updateStatus(todo.id)" class="btn btn-sm btn-warning" :class="{'btn-dark text-success' : todo.status}">{{todo.status ? 'Complate' : 'Pending'}}</button></td>
+                    <td style="text-align: center;" width="20%">{{todo.created_at}}</td>
+                    <td style="text-align: end;" width="20%">
                       <button class="btn btn-success btn-sm mx-1" v-on:click="editTodo(todo.id)"> Edit</button>
                       <button class="btn btn-danger btn-sm mx-1" :disabled="isDisabledDelete" v-on:click="deleteTodo(todo.id)"> Delete</button>
                     </td>
