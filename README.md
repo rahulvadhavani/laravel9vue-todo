@@ -47,16 +47,3 @@ Start the server
   npm run dev
   php artisan serve
 ```
-
-
-## Usage/Examples
-
-### create New projects project
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
-
